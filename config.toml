@@ -1,0 +1,34 @@
+# The URL the site will be built for
+base_url = "https://blog.folie.dev"
+
+title = "folie \u00E0 deux"
+
+description = "*Nix, open source software, How to's, privacy"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+theme = "hyde"
+
+languages = [
+     ]
+
+[extra]
+# Put all your custom variables here
+#
+hyde_links = [
+    {url = "https://blog.folie.dev", name = "Home"},
+    {url = "https://github.com/f0le", name = "Github"},
+    {url = "mailto:patrick@folie.dev", name = "Contact"},
+    {url = "https://folie.dev/patrick@folie.dev.asc", name = "PGP"},
+]
+
+hyde_sticky = "true"
+hyde_reverse = "true"
