@@ -36,47 +36,6 @@
  * Update the foundational and global aspects of the page.
  */
 
-/* pt-sans-regular - latin-ext_latin */
-@font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('PT Sans'), local('PTSans-Regular'),
-       url('https://blog.folie.dev/fonts/pt-sans-v11-latin-ext_latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('https://blog.folie.dev/fonts/pt-sans-v11-latin-ext_latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* pt-sans-italic - latin-ext_latin */
-@font-face {
-  font-family: 'PT Sans';
-  font-style: italic;
-  font-weight: 400;
-  src: local('PT Sans Italic'), local('PTSans-Italic'),
-       url('https://blog.folie.dev/fonts/pt-sans-v11-latin-ext_latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('https://blog.folie.dev/fonts/pt-sans-v11-latin-ext_latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* pt-sans-700 - latin-ext_latin */
-@font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('PT Sans Bold'), local('PTSans-Bold'),
-       url('https://blog.folie.dev/fonts/pt-sans-v11-latin-ext_latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('https://blog.folie.dev/fonts/pt-sans-v11-latin-ext_latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* pt-sans-700italic - latin-ext_latin */
-@font-face {
-  font-family: 'PT Sans';
-  font-style: italic;
-  font-weight: 700;
-  src: local('PT Sans Bold Italic'), local('PTSans-BoldItalic'),
-       url('https://blog.folie.dev/fonts/pt-sans-v11-latin-ext_latin-700italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('https://blog.folie.dev/fonts/pt-sans-v11-latin-ext_latin-700italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -298,7 +257,7 @@ tbody tr:nth-child(odd) th {
  */
 
 .container {
-  max-width: 38rem;
+  max-width: 70rem;
   padding-left:  1rem;
   padding-right: 1rem;
   margin-left:  auto;
