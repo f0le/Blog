@@ -1,6 +1,7 @@
 +++
 title = "Lightweight mail server"
-date = 2020-07-25
+date = 2020-07-27
+
 +++
 
 # Lightweight personal mail server
@@ -195,8 +196,6 @@ $ doas chown virtualmailuser:virtualmailuser /var/virtualmail
 ### SSL Certificates
 
 If you don't yet have a SSL Certificate you can get one from Let's Encrypt. There are many guides out there on how to do that, so I won't go into detail here. OpenBSD has a tool `acme-client` to automatically fetch SSL Certificate from Let's Encrypt, a webserver is needed also. See `/etc/example/httpd.conf` and `man acme-client` for details.
-
-#TODO change css values max-width to something sane\
 
 ### Virtualised User management
 
