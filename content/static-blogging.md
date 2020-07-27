@@ -23,25 +23,25 @@ Also Zola supports [Sass](https://sass-lang.com/) which makes CSS suck a little 
 Initialize a directory for Zola:
 
 ```sh
-zola init
+$ zola init
 ```
 
 Build the site:
 
 ```sh
-zola build
+$ zola build
 ```
 
 Check for errors: 
 
 ```sh
-zola check
+$ zola check
 ```
 
 Build and serve the site locally, useful for debugging (by default at 127.0.0.1:1111):
 
 ```sh
-zola serve
+$ zola serve
 ```
 <br></br>
 ## Building a site with Zola
@@ -49,27 +49,27 @@ zola serve
 First install Zola:
 
 ```sh
-sudo apt install zola
+$ sudo apt install zola
 ```
 
 To use Zola you have to initialize a directory first:
 
 ```sh
-zola init mywebsite
+$ zola init mywebsite
 ```
 
 For convenience install a [theme](https://www.getzola.org/themes/):
 
 ```sh
-cd website/themes
-git clone https://github/myzolatheme
+$ cd website/themes
+$ git clone https://github/myzolatheme
 ```
 
 Edit the `config.toml` and set the preferences to your liking.
 And write your first post:
 
 ```sh
-vim content/myfirstpost
+$ vim content/myfirstpost
 ```
 You don't have to add metadata to your posts but the opening/closing `+++` (brackets) are required. `myfirstpost`:
 ```md
@@ -81,13 +81,13 @@ title = "My first post with Zola"   #optional
 You can serve the site locally to see what it looks like:
 
 ```sh
-cd website
-zola serve
+$ cd website
+$ zola serve
 ```
 Finally build the site with:
 
 ```sh
-zola build 
+$ zola build 
 ```
 
 Now host your `website` directory with your favorite webserver and enjoy the loading time of a static website.
