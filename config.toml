@@ -27,7 +27,7 @@ hyde_links = [
     {url = "https://blog.folie.dev", name = "Home"},
     {url = "https://github.com/f0le", name = "Github"},
     {url = "mailto:patrick@folie.dev", name = "Contact"},
-    {url = "https://folie.dev/patrick@folie.dev.txt", name = "PGP Key"},
+    {url = "https://folie.dev/patrick@folie.dev.txt", name = "PGP"},
 ]
 
 # Modify the default layout
