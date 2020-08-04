@@ -157,7 +157,7 @@ $ doas useradd -M virtualmail
 ### Modify firewall rules
 
 Configuring pf is unfortunately out of scope if this article, the OpenBSD User guide is available [here](https://www.openbsd.org/faq/pf/). Expect a post about the configuration of pf and the differences between pf and iptables in the future.
-The submission port as well as the imaps and smtps ports are needed in the firewall.
+The submission port as well as the imap and smtp ports are needed in the firewall.
 
 ### Post installation configuration
 
