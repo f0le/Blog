@@ -191,6 +191,7 @@ Set permissions:
 $ doas chown virtualmailuser:virtualmailuser /var/virtualmail
 ```
 
+<br></br>
 ## Configuration
 
 ### SSL Certificates
@@ -709,6 +710,7 @@ $ doas rcctl start redis
 $ doas rcctl enable redis
 ```
 
+<br></br>
 ## Testing
 
 Now that everything is running you should be able to test your setup by logging into your account via IMAP and try to send and receive mail. Login should be possible with username and password for the respective fields in your mail client.
