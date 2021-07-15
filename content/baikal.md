@@ -19,7 +19,7 @@ From the [official website:](https://sabre.io/baikal/)
 Baikal requires a web server,PHP and a database. Install the needed packages with:
 
 ```sh
-doas pkg_add baikal mariadb-server php-pdo_mysql php
+$ doas pkg_add baikal mariadb-server php-pdo_mysql php
 ```
 By default OpenBSD installs Baïkal to `/var/www/baikal`.
 
@@ -32,13 +32,13 @@ For the database MariaDB is being used. Alternatively SQLite can also be used. F
 If this is the first mariadb-server install, do the db initialization.
 
 ```sh
-doas mysql_install_db
+$ doas mysql_install_db
 ```
 
 Secure the install.
 
 ```sh
-doas mysql_secure_installation
+$ doas mysql_secure_installation
 ```
 
 Create a database, user and grant privileges on the db to the user.
@@ -96,20 +96,20 @@ server "default" {
 Enable/activate the daemons; 
 MariaDB:
 ```sh
-doas rcctl enable mysqld
-doas rcctl start mysqld
+$ doas rcctl enable mysqld
+$ doas rcctl start mysqld
 ```
 
 Httpd:
 ```sh
-doas rcctl enable httpd
-doas rcctl start httpd
+$ doas rcctl enable httpd
+$ doas rcctl start httpd
 ```
 
 PHP:
 ```sh
-doas rcctl enable php74_fpm
-doas rcctl start php74_fpm
+$ doas rcctl enable php74_fpm
+$ doas rcctl start php74_fpm
 ```
 
 ### Finish the install
