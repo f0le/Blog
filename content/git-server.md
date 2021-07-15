@@ -89,8 +89,7 @@ $ git push
 
 # Recommended/further reading
 
-Most info in this blogpost is from:
-https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server
+Most info in this blogpost is from the: [Pro Git Book](https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server)
 
 `man git-shell`
 
