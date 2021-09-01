@@ -20,6 +20,8 @@ A flat file will handle the user management so you can employ your own script if
 
 In this blog post I won't explain basic concepts of e-mail, only reference some links for further reading in the respective paragraphs. This post is intended to be more of a hands on approach to a sane and scalable lightweight mail server configuration.
 
+**Update(2021-09-01)**: Added some bits to rspamd and redis configuration.
+
 <br></br>
 
 ## DNS and rDNS
@@ -694,6 +696,16 @@ domain {
 }
 ```
 
+Make sure Rspamd uses the right interface for redis, with the default configuration redis runs only on ipv4. So make some local changes.
+
+```sh
+$ doas vim /etc/rspamd/local.d/redis.conf
+```
+
+```cfg
+servers = "127.0.0.1:6379";
+```
+
 Start and enable the service.
 ```sh
 $ doas rcctl start rspamd
@@ -704,6 +716,12 @@ $ doas rcctl enable rspamd
 
 Redis works fine without any configuration. Bear in mind that the default configuration uses passwordless access to Redis. If you don't like this you have to change it. More information [here](https://redis.io/topics/security).
 Start and enable the service.
+
+The only thing to watch out for is to make sure the config has a port and ip defined; The standard redis port is 6379.
+```cfg
+bind 127.0.0.1
+port 6379
+```
 
 ```sh
 $ doas rcctl start redis
