@@ -7,6 +7,8 @@ date = 2021-07-14
 
 This post shows how to set up a git server on OpenBSD, but it should work on Linux or other *Nixes as well. User management will be done via an authorized keys file. Keys from persons which should have access to the git repos will be added there. To add a new repo somebody has to ssh into the server and initialize a new bare git repo.
 
+<br></br>
+
 ## Install necessary packages
 
 ```sh
@@ -48,6 +50,7 @@ This can be done with "chsh".
 ```sh
 $ doas chsh git
 ```
+
 ## Set up git 
 
 Initialize a bare repo on the server.
@@ -87,7 +90,9 @@ Finally push the local repo to the remote repo.
 $ git push
 ```
 
-# Recommended/further reading
+<br></br>
+
+# Recommended/Further reading
 
 Most info in this blogpost is from the: [Pro Git Book](https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server)
 
