@@ -1,5 +1,5 @@
 +++
-title = "Server side mail filtering with Sieve and Dovecot"
+title = "Server-side mail filtering with Sieve and Dovecot"
 date = 2021-09-09
 +++
 
