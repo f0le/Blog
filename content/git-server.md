@@ -81,7 +81,7 @@ $ git remote set-url origin git@domain:/git-repository/new-repository.git
 Add remote origin if it does not exist yet:
 
 ```sh
-$ git remote add origin git@domain:/git-repository/new-repository.git
+$ git remote add new-repository git@domain:/git-repository/new-repository.git
 ```
 
 Check if the remote repo can be read.
