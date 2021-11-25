@@ -72,10 +72,16 @@ Show current remote:
 ```sh
 $ git remote -v
 ```
-Change remote origin:
+Change remote origin if it already exists:
 
 ```sh
 $ git remote set-url origin git@domain:/git-repository/new-repository.git
+```
+
+Add remote origin if it does not exist yet:
+
+```sh
+$ git remote add origin git@domain:/git-repository/new-repository.git
 ```
 
 Check if the remote repo can be read.
