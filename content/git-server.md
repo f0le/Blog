@@ -40,7 +40,7 @@ To also restrict user supplied commands, set the command option; command="".
 Config should look something like this.
 
 ```cfg
-restrict,command="" ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIfozwE/mnCuklL9lVpZRyGS65aVHi6Ki0wDPG4hJtI2
+restrict ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIfozwE/mnCuklL9lVpZRyGS65aVHi6Ki0wDPG4hJtI2
 ```
 
 Change the login shell of the git user to git-shell. It severely limits available shell commands. Basically only git functionality is enabled. Read `man git-shell` for more information.
