@@ -1,0 +1,91 @@
+#Wireguard write-up for openBSD Server and Linux Client
+
+Wireguard is a VPN solution working on Layer X written by 
+
+This write-up details a setup where multiple peers can connect to a wireguard network where the gateway is an OpenBSD server.
+
+install wireguard:
+
+
+generate keypair
+$(umask 077; wg genkey | tee privatekey | wg pubkey > publickey)
+
+sample configuration file:
+
+set interface up
+
+on server:
+
+wg-quick doesnt work on oenbsd as
+
+on client:
+doas wg-quick up wg0
+
+enable ip forwarding:
+
+echo "net.inet.ip.forwarding=1" >> /etc/sysctl.conf
+echo "net.inet6.ip6.forwarding=1" >> /etc/sysctl.conf
+sysctl net.inet.ip.forwarding=1
+sysctl net.inet6.ip6.forwarding=1
+
+Solene Link:
+
+official site:
+https://www.wireguard.com/quickstart/
+
+udo ip link add dev wg0 type wireguard
+
+Peer A:
+
+❯ sudo ip address add dev wg0 10.0.0.1/24
+
+❯ sudo vim wg0.conf
+
+❯ ping folie.dev
+PING folie.dev (95.217.2.254) 56(84) bytes of data.
+64 bytes from mail.folie.dev (95.217.2.254): icmp_seq=1 ttl=241 time=45.2 ms
+^C
+--- folie.dev ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 45.150/45.150/45.150/0.000 ms
+
+❯ sudo wg set wg0 listen-port 51820 private-key .wireguard/privatekey
+
+sudo wg set wg0 peer FfhOXbnPNBsxS3kpiQCBfb4IV9JTm3krRl/DrgxXwls= allowed-ips 10.0.1.0/24 endpoint 95.217.2.254:51820
+
+openbsd :
+
+OpenBSD$ cat /etc/hostname.wg0   
+inet 10.0.0.1 255.255.255.0 NONE
+!/usr/local/bin/wg setconf wg0 /etc/wireguard/wg0.conf
+
+sh /etc/netstart wg0
+
+ doas cat /etc/wireguard/wg0.conf 
+[Interface]
+#Address = 10.0.1.0/24
+ListenPort = 51820
+PrivateKey = UOHUqmuaR/LtJk/tK/T4d27i6AJOTrB4RNPG7USJtUk=
+
+[Peer]
+PublicKey = 6gI4IjujxC5Z9NmSvygRIo/MLN84ZErVGpczMaSyVA4=
+AllowedIPs = 10.0.0.1/32
+
+#[Peer]
+#PublicKey = R4UMcaI8Ds78iDqQgg8qv+XAO1PTJ3b2ySh1S+oLRRQ=
+#AllowedIPs = 10.0.0.2/32
+
+allowed-ips only define which ip the client has to have to succesfully have a connection to the peer
+
+Check reachability of peer(from client):
+
+ping 10.0.0.1 
+
+OR
+
+curl zx2c4.com/ip
+
+something doens't work with ip forwarding
+
+
+firewall richtig konfigurieren!!!

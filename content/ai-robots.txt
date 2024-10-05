@@ -1,0 +1,6 @@
+#Rant about the AI scraping of the web
+
+how to rpevent ai scraping via robots.txt
+
+Other ways:
+
